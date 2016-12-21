@@ -1,0 +1,129 @@
+@font-face {
+	font-family 'si'
+	src url('../../social-icons/socicon.eot')
+	src: url('../../social-icons/socicon.eot?#iefix') format('embedded-opentype'),
+			url('../../social-icons/socicon.woff') format('woff'),
+			url('../../social-icons/socicon.ttf') format('truetype'),
+			url('../../social-icons/socicon.svg#icomoonregular') format('svg');
+	font-weight normal
+	font-style normal
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family si
+		src url(../../social-icons/socicon.svg) format(svg)
+	}
+}
+
+.soc {
+	overflow hidden
+	margin 0
+	list-style none
+	padding 10px 0
+}
+
+.soc li {
+	display:inline-block;
+}
+
+.soc li a {
+	font-family:si!important;
+	font-style:normal;
+	font-weight:400;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+
+	-o-transition:.1s;
+	-ms-transition:.1s;
+	-moz-transition:.1s;
+	-webkit-transition:.1s;
+	transition:.1s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+
+	overflow:hidden;
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	position: relative;
+	z-index: 1;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 30px;
+	-webkit-border-radius: 42px;
+	-moz-border-radius: 42px;
+	border-radius: 42px;
+	margin-right: 10px;
+	color: #000;
+	background-color: #eee;
+	cursor: pointer;
+}
+
+.soc a:hover {
+	z-index: 2;
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+
+.soc-icon-last{
+	margin:0 !important;
+}
+
+.soc-youtube:before {
+	content:'\e051';
+}
+.soc-facebook:before {
+	content:'\e041';
+}
+.soc-instagram:before {
+	content:'\e057';
+}
+.soc-vkontakte:before {
+	content:'\e01a';
+}
+
+.footer
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	justify-content center
+	align-items center
+	background-color #121212
+
+	&__privacy-list
+		border-bottom 1px solid rgba(255, 255, 255, 0.34)
+		display -ms-flexbox
+		display flex
+		-ms-flex-direction row
+		flex-direction row
+		width 81%
+		justify-content space-around
+		padding 20px 0
+		color white
+		cursor pointer
+		font-size 15px
+		margin 0 0 15px 0
+
+		+below(2)
+			flex-direction column
+			align-items center
+
+.privacy
+
+	&__point
+		transition all 0.2s ease-in
+		text-decoration none
+		&:hover
+			-webkit-stroke-width 5.3px
+			-webkit-stroke-color #FFFFFF
+			-webkit-fill-color #FFFFFF
+			text-shadow 1px 0 20px yellow

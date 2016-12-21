@@ -1,0 +1,151 @@
+.offering
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	justify-content center
+	align-items center
+
+	&__caption
+		text-align center
+		position relative
+		font-size 24px
+		margin 0 0 60px 0
+		width 60%
+		padding 35px 0
+
+		+below(5)
+			width 76%
+		&--colored
+			color #8BC34A
+		&--alert
+			font-weight 600
+
+		&::after
+			content " "
+			position absolute
+			background url(../../images/wavy-border.png)
+			height 6px
+			width 100%
+			left 0
+			top 100%
+		&::before
+			content " "
+			position absolute
+			background url(../../images/wavy-border.png)
+			height 6px
+			width 100%
+			left 0
+			top 0
+
+	&__take-it
+		margin 20px 0 20px 0
+		font-size 32px
+		font-weight 500
+
+		+below(2)
+			text-align center
+
+		&--alert
+			//background rgba(0,0,0,0.67)
+			//font-weight 700
+			//text-shadow 1px 2px 4px #fff
+			//color white
+			//padding 5px
+			font-weight 700
+			text-shadow 1px 2px 4px rgba(0,0,0,0.75)
+			color black
+			padding 5px
+
+	&__text
+		text-align center
+		font-size 27px
+		line-height 3em
+		color #9E9E9E
+		margin 0 0 100px 0
+
+		+below(2)
+			line-height 1.5em
+			margin 0 0 60px 0
+
+		&:visited
+			color black
+
+		&--special
+			font-weight 600
+			font-size 30px
+			color black
+
+			+below(2)
+				margin 0 0 35px 0
+
+		&--action
+			//background-color rgba(139, 195, 74, 0.7)
+			//padding 10px
+			color #FF9800
+			font-weight bold
+
+		.new-price
+			font-size 70px
+			position relative
+			color #8BC34A
+
+			&:after
+				position absolute
+				content "\2014"
+
+			&:before
+				position absolute
+				content "\2014"
+				margin 0 0 0 -55px
+
+	&__use-it
+		-webkit-box-sizing content-box
+		-moz-box-sizing content-box
+		box-sizing content-box
+		width 41%
+		cursor pointer
+		border none
+		font normal 28px/2 Arial, Helvetica, sans-serif
+		color rgba(255,255,255,1)
+		text-align center
+		-o-text-overflow ellipsis
+		text-overflow ellipsis
+		background #93b658
+		-webkit-box-shadow 0 0 9px 4px rgba(0,0,0,0.5)
+		box-shadow 0 0 9px 4px rgba(0,0,0,0.5)
+		text-shadow 1px 1px #fff59d
+		position relative
+		white-space normal
+		padding 0 10px
+
+		+below(2)
+			width 80%
+
+		&--desktop-v
+
+			+below(2)
+				display none
+		//+below(5)
+		//	font-size 20px
+		//	padding 25px 0
+		//
+
+
+		&:hover
+			background #FDCA2C
+			text-decoration none
+
+		&:before
+			position absolute
+			content " "
+			background url(../../images/arrow-left.png) no-repeat
+			height 190px
+			width 67px
+			left -100px
+			top -147px
+
+.old-price
+	margin 0
+	&__strikeout
+		text-decoration line-through
+		color #FFB300

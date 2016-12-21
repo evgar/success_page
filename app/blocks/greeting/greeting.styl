@@ -1,0 +1,40 @@
+.greeting
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+	justify-content center
+	align-items stretch
+	background-color rgba(12, 13, 14, 0.80)
+	color white
+	padding 35px 0
+	margin 15px 0 0 0
+
+
+	&__message
+		align-self center
+		font-size 22px
+		font-weight 500
+		margin 0 0 0 20px
+		line-height 1.5em
+		text-align center
+		width 41%
+
+		+below(5)
+			width 57%
+
+	&__icon
+		height 100px
+		width 100px
+
+		+below(2)
+			display none
+
+.message
+	&__link
+		text-decoration none
+		border-radius 15px
+		padding 4px
+		color #93b658
+
+		&:visited
+			color #93b658

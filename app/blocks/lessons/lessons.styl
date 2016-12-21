@@ -1,0 +1,197 @@
+.lessons
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	justify-content center
+	align-items center
+
+	&__caption
+		font-size 34px
+		font-weight bold
+		color #4c6190
+		font-family Gotham Pro
+		margin 0 0 30px 0
+		text-align center
+
+	&__description
+		text-align center
+		position relative
+		font-size 24px
+		margin 0 0 60px 0
+		width 100%
+		padding 35px 0
+
+	&__header
+		position relative
+		text-align center
+		font-size 27px
+		margin 0 0 25px 0
+		line-height 3em
+		width 49%
+
+		+below(2)
+			width 80%
+
+		+below(1)
+			width 100%
+
+		&::after
+			content " "
+			position absolute
+			background url(../../images/wavy-border.png)
+			height 6px
+			width 100%
+			left 0
+			top 100%
+
+		&::before
+			content " "
+			position absolute
+			background url(../../images/wavy-border.png)
+			height 6px
+			width 100%
+			left 0
+			top 0
+
+.lesson
+	display flex
+	flex-direction column
+	border 3px solid rgba(158, 158, 158, 0.59)
+	margin 45px 0 50px 0
+	padding 20px 0
+	width 49%
+	border-image-slice 15 16 15 16
+	border-image-width 10px 10px 10px 10px
+	border-image-outset 0 0 0 0
+	border-image-repeat stretch stretch
+	border-image-source url(../../images/drawing-frame.png)
+
+	+below(4)
+		width 71%
+
+	+below(2)
+		width 95%
+
+	&__name
+		background url(../../images/marked.png) no-repeat
+		background-size 225px 55px
+		padding 23px 9px
+		font-size 18px
+		background-position center
+		margin -50px 0 0 0
+		width 225px
+		align-self center
+		text-align center
+		font-family Gotham Pro
+
+	&__caption
+		text-align center
+		font-size 24px
+		margin 10px 0 20px 0
+		font-weight bold
+
+	&__use-it
+		-webkit-box-sizing content-box
+		-moz-box-sizing content-box
+		box-sizing content-box
+		//width 50%
+		cursor pointer
+		border none
+		font normal 32px/2 Arial, Helvetica, sans-serif
+		color rgba(255,255,255,1)
+		text-align center
+		-o-text-overflow ellipsis
+		text-overflow ellipsis
+		background #93b658
+		-webkit-box-shadow 0 0 9px 4px rgba(0,0,0,0.5)
+		box-shadow 0 0 9px 4px rgba(0,0,0,0.5)
+		text-shadow 1px 1px #fff59d
+		position relative
+		white-space normal
+
+		+below(5)
+			font-size 20px
+			padding 25px 0
+
+		+below(2)
+			width 80%
+
+		&:hover
+			background #FDCA2C
+			text-decoration none
+
+		&:before
+			position absolute
+			content " "
+			background url(../../images/arrow-left.png) no-repeat
+			height 190px
+			width 67px
+			left -100px
+			top -147px
+
+			+below(2)
+				left -67px
+				top -17px
+				background-size 40px
+
+
+.points-block
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+	justify-content space-between
+	align-items center
+
+	&__logo
+
+		&--bingo
+			background url(../../images/bingo.png) no-repeat
+			width 190px
+			height 200px
+			background-position-x center
+			background-size 150px
+
+			+below(2)
+				display none
+
+		&--handshake
+			background url(../../images/handshake.png) no-repeat
+			width 190px
+			height 200px
+			background-position-x center
+			background-size 170px
+
+			+below(2)
+				display none
+
+		&--lider
+			background url(../../images/lider.png) no-repeat
+			width 190px
+			height 200px
+			background-position-x center
+			background-size 150px
+
+			+below(2)
+				display none
+
+.lesson-list
+	width 73%
+	line-height 1.5em
+	margin 25px 0 0 27px
+
+	+below(2)
+		width 89%
+		margin 25px 0 0 32px
+
+	&__point
+		position relative
+		padding 0 0 20px 0
+		font-style italic
+
+		&::before
+			position absolute
+			content "\2713"
+			left -26px
+			font-size 24px
+			font-weight bolder
+			color #4c6190
